@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class MenstruationApp {
     private LocalDate lastMenstrualFlowDate;
-    private LocalDate ovulationDate;
 
     public void setLastMenstrualFlow(String lastFlow){
         this.lastMenstrualFlowDate = LocalDate.parse(lastFlow);
@@ -11,6 +10,7 @@ public class MenstruationApp {
 
 
     public LocalDate getNextMenstrualFlow(){
+
         return lastMenstrualFlowDate.plusDays(28);
     }
 
